@@ -1,0 +1,17 @@
+.poster {
+    -fx-pref-width: 100px;
+    -fx-pref-height: 100px;
+    -fx-background-color: yellow;
+}
+.player-top {
+    -fx-background-color: linear-gradient(pink, #5a067c);
+}
+.music-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-fill: white;
+}
+.music-player-root {
+    -fx-border-color: #000;
+    -fx-border-width: 1px;
+}
