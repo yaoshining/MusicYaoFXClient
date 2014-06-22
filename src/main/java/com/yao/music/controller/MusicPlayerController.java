@@ -7,6 +7,7 @@ import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ToggleButton;
@@ -17,6 +18,7 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaPlayer.Status;
 import javafx.scene.media.MediaView;
+import javafx.stage.Screen;
 import javafx.stage.Window;
 
 import java.util.*;
@@ -92,7 +94,21 @@ public class MusicPlayerController {
     }
     @FXML
     public void maximum(){
-
+        Screen screen = Screen.getPrimary();
+        Rectangle2D bounds = screen.getVisualBounds();
+        Window window = root.getScene().getWindow();
+        window.setX(bounds.getMinX());
+        window.setY(bounds.getMinY());
+        window.setWidth(bounds.getWidth());
+        window.setHeight(bounds.getHeight());
     }
-
+    public void minimize(){
+        final Window window = root.getScene().getWindow();
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                window.hide();
+            }
+        });
+    }
 }

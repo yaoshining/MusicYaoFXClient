@@ -49,8 +49,8 @@
             <right>
                 <VBox>
                     <HBox>
-                        <Hyperlink text="最小化"></Hyperlink>
-                        <Hyperlink text="最大化"></Hyperlink>
+                        <Hyperlink text="最小化" onAction="#minimize"></Hyperlink>
+                        <Hyperlink text="最大化" onAction="#maximum"></Hyperlink>
                         <Hyperlink text="关闭" onAction="#closePlayer"></Hyperlink>
                     </HBox>
                 </VBox>
